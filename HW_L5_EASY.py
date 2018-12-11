@@ -29,6 +29,14 @@ list_dir = os.listdir()
 for i in list_dir:
     del_dir(i)
 
+# Другой вариант создания директорий(Заранее заданные директории)
+
+def create_dir():
+    list_dir = ["dir_1", "dir_2", "dir_3", "dir_4", "dir_5", "dir_6", "dir_7", "dir_8", "dir_9"]
+    for i in list_dir:
+        os.mkdir(i)
+
+    
 # Задача-2:
 # Напишите скрипт, отображающий папки текущей директории.
 
