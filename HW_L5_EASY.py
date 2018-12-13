@@ -36,7 +36,7 @@ def create_dir():
     for i in list_dir:
         os.mkdir(i)
 
-    
+
 # Задача-2:
 # Напишите скрипт, отображающий папки текущей директории.
 
@@ -87,6 +87,24 @@ def dupl_files(dirname):
 
 # duplicate_file('HW_L5_EASY.py')
 
+# Для задания normal
+
+def sys_info():
+    print('Давайте начнем.')
+    print('Выбирете действие к которому приступить:')
+    print('[1] - Перейти в папку')
+    print('[2] - Просмотреть содержимое текущей папки')
+    print('[3] - Удалить папку')
+    print('[4] - Создать папку')
+
+# Первый пункт для задания normal по переходу в папку
+
+def change_dir(path):
+    try:
+        os.chdir(path)
+        print(os.getcwd() + ' - текушая директория')
+    except:
+        print(path + ' - Такой директории нету')
 
 
 
