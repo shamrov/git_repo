@@ -46,8 +46,10 @@
 import random
 import sys
 
+
 class Case:
     # Достаем бочонки по 1 и высчитываем остаток
+
     def boch(self):
         b_list = list(range(1, 91))
         random.shuffle(b_list)
@@ -60,7 +62,6 @@ class Case:
         self.generate = self.boch()
 
 
-
 class Loto:
     def __init__(self, name):
         str_list = list(range(1, 91))
@@ -71,6 +72,8 @@ class Loto:
             __class__.gen_string(str_list),
             __class__.gen_string(str_list)
         ]
+
+# Создаем строку и заполняем ее 5-ю числами в рандомном числами
 
     @staticmethod
     def gen_string(str_list):
@@ -101,6 +104,7 @@ class Loto:
 
 
 c = Case()
+
 player = Loto(' Игрок ')
 computer = Loto(' Компьютер ')
 
@@ -125,12 +129,5 @@ while True:
             sys.exit(1)
         elif computer.search(computer.cards, num_cask):
             continue
-
-
-
-
-
-
-
-
-
+    if num_reply != 'y' or 'n' or 'q':
+        print('\n{:*^56}\n'.format('\nНеизвестный символ\n'))
